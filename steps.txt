@@ -1,0 +1,13 @@
+- Install dotenv and path packages and require them in server app.js 
+- Create a .env file and add it to .gitignore
+- Add scripts to your server app.js
+- Add script to your server package.json
+- Creat a Procfile in the root of the server
+- Log into Heroku
+- Create an app on Heroku
+- Update the url's in react with heroku url
+- Build your static files in react
+- push to github
+- Deploy to Heroku
+- Add your environment variables 
+- Then deploy
