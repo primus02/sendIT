@@ -32,7 +32,7 @@ function GetAllAppOrders(props){
     });
 
     const username = localStorage.getItem("username");
-    const url = "http://localhost:3000";
+  //  const url = "http://localhost:3000";
    const token = localStorage.getItem("token"); 
    const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
@@ -41,7 +41,7 @@ function GetAllAppOrders(props){
     const [newStatus, setNewStatus]=useState("");
 
     const getAllAppOrders=()=>{
-        fetch(`${url}/get-all-orders`, {
+        fetch(`/get-all-orders`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -85,7 +85,7 @@ function GetAllAppOrders(props){
 			
 			if(newStatus !==""){
             
-			 fetch(`${url}/change-status/${orderId}`, {
+			 fetch(`/change-status/${orderId}`, {
               method: "PATCH",
               headers: {
                "Content-Type": "application/json", 
@@ -141,7 +141,7 @@ function GetAllAppOrders(props){
 
             document.querySelector(".location-modal").classList.add("d-none");
             
-            fetch(`${url}/change-location/${orderId}`, {
+            fetch(`/change-location/${orderId}`, {
               method: "PATCH",
               headers: {
                "Content-Type": "application/json", 

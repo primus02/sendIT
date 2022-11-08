@@ -48,7 +48,7 @@ function CreateOrder(props){
     });
 
     const token = localStorage.getItem("token");
-    const url = "http://localhost:3000";
+   // const url = "http://localhost:3000";
     const username = localStorage.getItem("username");
     const isUserLoggedIn= localStorage.getItem("isUserLoggedIn");
 
@@ -82,7 +82,7 @@ const createOrder=(e)=>{
   }
     else{
 
-        fetch(`${url}/create-order`, {
+        fetch(`/create-order`, {
             method: "POST",
             headers: {
                 Accept: "application/json, text/plain",

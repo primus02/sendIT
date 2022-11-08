@@ -12,7 +12,7 @@ function UserProfile(props){
 
 const username = localStorage.getItem("username");
 
-const url = "http://localhost:3000";
+//const url = "http://localhost:3000";
 
 const name = localStorage.getItem("name");
 
@@ -38,7 +38,7 @@ const isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
 
     const getuserDetails=()=>{
 
-        fetch(`${url}/get-orders/search?username=${username}`, {
+        fetch(`/get-orders/search?username=${username}`, {
     
             method: "GET",
             headers: {

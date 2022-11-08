@@ -11,7 +11,7 @@ function AdminProfile(props){
     });
 
     const username = localStorage.getItem("username");
-    const url = "http://localhost:3000";
+   // const url = "http://localhost:3000";
     const token = localStorage.getItem("token");
     const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
@@ -20,7 +20,7 @@ function AdminProfile(props){
      const [intransitCount, setIntransitCount]= useState(0);
 
      const getAllAppOrders=()=>{
-        fetch(`${url}/get-all-orders`, {
+        fetch(`/get-all-orders`, {
     
             method: "GET",
             headers: {

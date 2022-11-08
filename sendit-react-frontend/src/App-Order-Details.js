@@ -13,11 +13,11 @@ function AppOrderDetails(props){
 
   const token = localStorage.getItem("token");
   const isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
-  const url = "http://localhost:3000";
+ // const url = "http://localhost:3000";
    const [order, setOrder]= useState({});
 
    const getorderDetails=()=>{
-    fetch(`${url}/get-an-order/${props.match.params.id}`, {
+    fetch(`/get-an-order/${props.match.params.id}`, {
         method: "GET",
         headers: {
             Authorization: `Bearer ${token}`

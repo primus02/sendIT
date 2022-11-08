@@ -9,7 +9,7 @@ import "./App.css";
 
 function AdminSignin(props){
 
-    const url = "http://localhost:3000";
+    // const url = "http://localhost:3000";
 
     const [username, setUsername]= useState("");
     const [password, setPassword]= useState("");
@@ -28,7 +28,7 @@ function AdminSignin(props){
            return;
        }
        else{
-       fetch(`${url}/admin/signin`, {
+       fetch(`/admin/signin`, {
            
            method: "POST",
            headers: {

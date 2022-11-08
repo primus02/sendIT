@@ -52,7 +52,7 @@ function OrderDetails(props){
     });
 
     const username = localStorage.getItem("username");
-    const url = "http://localhost:3000";
+   // const url = "http://localhost:3000";
     const token = localStorage.getItem("token");
     const isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
 
@@ -60,7 +60,7 @@ function OrderDetails(props){
 
     const getOrder=()=>{
 
-        fetch(`${url}/get-order/search?username=${username}&id=${props.match.params.id}`, {
+        fetch(`/get-order/search?username=${username}&id=${props.match.params.id}`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -121,7 +121,7 @@ function OrderDetails(props){
 
           else{
 			
-            fetch(`${url}/edit-order/search?username=${username}&id=${props.match.params.id}`, {
+            fetch(`/edit-order/search?username=${username}&id=${props.match.params.id}`, {
             method: "PUT",
             headers: {
             "Content-Type": "application/json", 
@@ -165,7 +165,7 @@ function OrderDetails(props){
     const cancelOrder=()=>{
         const decision= prompt("Are you sure you want to cancel this order? Confirm this by typing any word in the space below and click OK!");
 		if(decision){
-			fetch(`${url}/cancel-order/search?username=${username}&id=${props.match.params.id}`, {
+			fetch(`/cancel-order/search?username=${username}&id=${props.match.params.id}`, {
             method: "DELETE",
             headers: {
 		   "Content-Type": "application/json",

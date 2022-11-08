@@ -12,7 +12,7 @@ function GetAllOrders(props){
     });
 
     const username = localStorage.getItem("username");
-    const url = "http://localhost:3000";
+   // const url = "http://localhost:3000";
     const token = localStorage.getItem("token");
     const isUserLoggedIn= localStorage.getItem("isUserLoggedIn");
 
@@ -20,7 +20,7 @@ function GetAllOrders(props){
 
     const getOrders=()=>{
 
-        fetch(`${url}/get-orders/search?username=${username}`, {
+        fetch(`/get-orders/search?username=${username}`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`
