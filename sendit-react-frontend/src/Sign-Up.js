@@ -40,7 +40,7 @@ function SignUp(props){
     });
 
 
-    const url = "https://sendit-project.herokuapp.com";
+    const url = "http://localhost:3000";
 
     let counter = 0;
     const images= ["/static/delivery1.jpg", "/static/delivery2.jpg", "/static/delivery-bus.jpg", "/static/delivery parcel.jpg", "/static/delivery3.jpg"];

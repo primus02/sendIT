@@ -12,7 +12,7 @@ function UserProfile(props){
 
 const username = localStorage.getItem("username");
 
-const url = "https://sendit-project.herokuapp.com";
+const url = "http://localhost:3000";
 
 const name = localStorage.getItem("name");
 

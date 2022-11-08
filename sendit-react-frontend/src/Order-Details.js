@@ -52,7 +52,7 @@ function OrderDetails(props){
     });
 
     const username = localStorage.getItem("username");
-    const url = "https://sendit-project.herokuapp.com";
+    const url = "http://localhost:3000";
     const token = localStorage.getItem("token");
     const isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
 

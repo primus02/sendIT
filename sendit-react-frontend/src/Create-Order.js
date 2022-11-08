@@ -48,7 +48,7 @@ function CreateOrder(props){
     });
 
     const token = localStorage.getItem("token");
-    const url = "https://sendit-project.herokuapp.com";
+    const url = "http://localhost:3000";
     const username = localStorage.getItem("username");
     const isUserLoggedIn= localStorage.getItem("isUserLoggedIn");
 
