@@ -5,7 +5,7 @@ const path= require("path");
 
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3000;
-require("dotenv/config");
+require("dotenv").config();
 
 const customerRoute = require("./routes/signup");
 
