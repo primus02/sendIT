@@ -5,7 +5,7 @@ const path= require("path");
 const cors= require("cors");
 
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 
 const customerRoute = require("./routes/signup");
