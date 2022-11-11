@@ -6,7 +6,7 @@ const path= require("path");
 const cors= require("cors");
 
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 
 const customerRoute = require("./routes/signup");
@@ -23,7 +23,7 @@ const allordersRoute = require("./routes/allorders");
 
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, ()=>
+mongoose.connect(`${process.env.DB_CONNECTION}`, { useNewUrlParser: true, useUnifiedTopology: true }, ()=>
  console.log("DB connected")
 );
 mongoose.Promise = global.Promise;
