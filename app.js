@@ -65,7 +65,7 @@ app.use("/", allordersRoute);
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("sendit-react-frontend/build"));
     app.get("*", (req, res, next)=> {
-        res.sendFile(path.resolve(__dirname, "sendit-react-frontend", "build", "indext.html"));
+        res.sendFile(path.resolve(__dirname, "sendit-react-frontend", "build", "index.html"));
     })
 }
 
