@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 
 const app = express();
@@ -5,8 +6,8 @@ const path= require("path");
 const cors= require("cors");
 
 const bodyParser = require("body-parser");
-const PORT = process.env.PORT || 3001;
-require("dotenv").config();
+const PORT = process.env.PORT || 3000;
+
 
 const customerRoute = require("./routes/signup");
 
