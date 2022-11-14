@@ -23,9 +23,12 @@ const allordersRoute = require("./routes/allorders");
 
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, ()=>
- console.log("DB connected")
-);
+// mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, ()=>
+//  console.log("DB connected")
+// );
+mongoose.connect(process.env.DB_CONNECTION).catch(err=> console.log(err));
+
+
 mongoose.Promise = global.Promise;
 
 
