@@ -28,7 +28,7 @@ function AdminSignin(props){
            return;
        }
        else{
-       fetch(`/admin/signin`, {
+       fetch(`admin/signin`, {
            
            method: "POST",
            headers: {
